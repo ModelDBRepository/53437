@@ -1,0 +1,50 @@
+objectvar save_window_, rvp_
+objectvar scene_vector_[2]
+objectvar ocbox_, ocbox_list_, scene_, scene_list_
+{ocbox_list_ = new List()  scene_list_ = new List()}
+
+//Begin ArtCellGUI[0]
+{
+load_file("netbild.hoc")
+}
+ocbox_ = new ArtCellGUI(1)
+{object_push(ocbox_)}
+{
+tobj = new MechanismStandard("NetStim")
+tobj.set("interval", 10, 0)
+tobj.set("number", 1, 0)
+tobj.set("start", 5, 0)
+tobj.set("noise", 0, 0)
+}
+{append(tobj, "S1")}
+{
+tobj = new MechanismStandard("NetStim")
+tobj.set("interval", 10, 0)
+tobj.set("number", 1, 0)
+tobj.set("start", 22, 0)
+tobj.set("noise", 0, 0)
+}
+{append(tobj, "S2")}
+{
+tobj = new MechanismStandard("NetStim")
+tobj.set("interval", 10, 0)
+tobj.set("number", 1, 0)
+tobj.set("start", 25, 0)
+tobj.set("noise", 0, 0)
+}
+{append(tobj, "S3")}
+{
+tobj = new MechanismStandard("IntFire1")
+tobj.set("tau", 10, 0)
+tobj.set("refrac", 0, 0)
+}
+{append(tobj, "IntFire1")}
+{object_pop()}
+{
+ocbox_.map("ArtCellGUI[0]", 6, 83, 449.28, 291.84)
+}
+objref ocbox_
+//End ArtCellGUI[0]
+
+objectvar scene_vector_[1]
+{doNotify()}

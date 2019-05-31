@@ -1,0 +1,4 @@
+load_file("nrngui.hoc")
+load_file("cells.ses")
+load_file("net.ses")
+load_file("rig.ses")

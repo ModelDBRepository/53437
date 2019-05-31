@@ -1,0 +1,34 @@
+objectvar save_window_, rvp_
+objectvar scene_vector_[4]
+objectvar ocbox_, ocbox_list_, scene_, scene_list_
+{ocbox_list_ = new List()  scene_list_ = new List()}
+
+//Begin NetGUI[0]
+{
+load_file("netbild.hoc")
+}
+{ocbox_ = new NetGUI(1)}
+{object_push(ocbox_)}
+{mapold2new = new Vector()  missing = new List()}
+original_type("S1")
+original_type("S2")
+original_type("S3")
+original_type("IntFire1")
+newnode(0, -153, 42)
+newnode(1, -91, 46)
+newnode(2, -31, 43)
+newnode(3, -84, -18)
+newedge(0, 3, 0, 0.8, 0)
+newedge(1, 3, 0, 0.8, 0)
+newedge(2, 3, 0, 0.8, 0)
+{create_ = 1  create1()}
+{g.size(-166.667,166.667,-124.997,124.997)}
+{object_pop()}
+{
+ocbox_.map("NetGUI[0]", 6, 415, 528, 327.36)
+}
+objref ocbox_
+//End NetGUI[0]
+
+objectvar scene_vector_[1]
+{doNotify()}
