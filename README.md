@@ -1,24 +1,24 @@
 Hines, M.L. and Carnevale, N.T. Discrete event simulation in the
-NEURON environment Neurocomputing 58-60:1117-1122, 2004.
+NEURON environment *Neurocomputing* 58-60:1117-1122, 2004.
 
 The response of many types of integrate and fire cells to synaptic input
 can be computed analytically and their threshold crossing either
 computed analytically or approximated to high accuracy via Newton
-approximation.  The NEURON simulation environment simulates networks of
+approximation. The NEURON simulation environment simulates networks of
 such artificial spiking neurons using discrete event simulation
 techniques in which computations are performed only when events are
-received.  Thus computation time is proportional only to the number of
+received. Thus computation time is proportional only to the number of
 events delivered and is independent of the number of cells or problem
-time. 
+time.
 
 The first two panels of figure 1 are reproduced using the
 fixed step method.
 
 When the variable time step method is
 selected the third panel looks quite different from the figure
-after NEURON version 5.7.71 due to an improvment in NetStim.
+after NEURON version 5.7.71 due to an improvement in NetStim.
 The old version of NetStim sent a self-event
-to itself .1 ms after each spike event so that it could reset a spike
+to itself 0.1 ms after each spike event so that it could reset a spike
 variable used for plotting. The new version is more efficient
 since it no longer sends this
 extra event to itself and no longer manages the spike variable.
@@ -40,3 +40,6 @@ Therefore if one wishes to capture the 0 interval discontinuities, one can
 change ARTIFICIAL_CELL to POINT_PROCESS but at the cost of purposeless
 Cvode initialization.
 
+---
+
+2025-05-27 – Standardized to Markdown.
